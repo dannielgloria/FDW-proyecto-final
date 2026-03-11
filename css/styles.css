@@ -1,0 +1,121 @@
+:root{
+    --bg: #16161B;
+    --panel: rgba(10,14,24,.72);
+    --panelSolid:#0f1c2d;
+    --text:#f9f9f9;
+    --muted: rgba(249,249,249,.72);
+    --accent:#00a8ff;
+    --accent2:#4cc2ff;
+    --shadow: 0 16px 50px rgba(0,0,0,.45);
+    --radius: 14px;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+
+body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* ===== Profiles ===== */
+.profiles-page{
+    min-height: 100vh; /* 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+}
+
+.profiles-header{
+    padding: 28px 32px;
+}
+
+.dplus-mark{
+    font-weight: 700;
+    letter-spacing: .3px;
+    font-size: 22px;
+}
+
+.dplus{
+    opacity: .85;
+}
+
+.profiles-main{
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.profiles-title{
+    font-size: clamp(26px, 4vw, 44px); /* Ajusta el tamaño de la fuente entre 26px y 44px según el ancho de la pantalla */
+    margin: 0 0 34px;
+    font-weight: 700;
+}
+
+.profiles-grid{
+    display: flex;
+    gap: 34px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profiles-card{
+    width: 168px;
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform .22s ease;
+}
+
+.profiles-card img{
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 999px;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.profiles-card span{
+    opacity: .92;
+    letter-spacing: .2px;
+    font-size: 18px;
+}
+
+.profiles-card:hover{
+    transform: translateY(-3px);
+}
+
+.profiles-card:hover img{
+    transform: scale(1.05);
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.add-profile{
+    cursor: not-allowed;
+    opacity: .55;
+}
+
+.add-circle{
+    width: 132px;
+    height: 132px;
+    border-radius: 999px;
+    font-size: 48px;
+    background: #4E4E51;
+    place-items: center;
+    color: rgb(255, 255, 255 );
+}
+
+.profiles-hint{
+    margin-top: 26px;
+    color: var(--muted);
+    font-size: 14px;
+}
