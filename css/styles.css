@@ -129,3 +129,12 @@ body{
         margin-top: 0px;
     }
 }
+
+.home-page{
+    background-color: transparent;
+    background-image: url("../img/profiles/profile1-home.png"); /* se usa URL relativa para cargar la imagen no src ya que es un fondo */
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    width: auto;
+}
