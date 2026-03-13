@@ -17,7 +17,7 @@ body{
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: Inspire-Bold, sans-serif;
 }
 
 /* ===== Profiles ===== */
@@ -31,29 +31,33 @@ body{
     padding: 28px 32px;
 }
 
-.dplus-mark{
-    font-weight: 700;
-    letter-spacing: .3px;
-    font-size: 22px;
-}
 
-.dplus{
-    opacity: .85;
+.logo {
+    background-color: transparent;
+    background-image: url("../img/logos/disneyplus-logo.png"); /* se usa URL relativa para cargar la imagen no src ya que es un fondo */
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    min-height: 50px;
+    min-width: 86px;
+    width: auto;
 }
 
 .profiles-main{
-    flex: 1; /* Ocupa el espacio restante */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 24px;
+    margin-top: -300px;
 }
 
 .profiles-title{
-    font-size: clamp(26px, 4vw, 44px); /* Ajusta el tamaño de la fuente entre 26px y 44px según el ancho de la pantalla */
     margin: 0 0 34px;
-    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: .11px;
+    line-height: 1.2;
 }
 
 .profiles-grid{
@@ -105,12 +109,12 @@ body{
 }
 
 .add-circle{
-    width: 132px;
-    height: 132px;
+    width: 132px; height: 132px;
     border-radius: 999px;
+    display: grid;
+    place-items: center;
     font-size: 48px;
     background: #4E4E51;
-    place-items: center;
     color: rgb(255, 255, 255 );
 }
 
@@ -118,4 +122,10 @@ body{
     margin-top: 26px;
     color: var(--muted);
     font-size: 14px;
+}
+
+@media (max-width: 480px){
+    .profiles-main{
+        margin-top: 0px;
+    }
 }
